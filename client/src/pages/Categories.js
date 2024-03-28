@@ -14,13 +14,8 @@ const Categories = () => {
           {categories.map((c) => (
             <div className="col-md-4 mb-4" key={c._id}>
               <div className="card h-100">
-                <img
-                  src={c.imageUrl} // If you have category images, use the imageUrl here
-                  className="card-img-top"
-                  alt={c.name}
-                />
                 <div className="card-body">
-                  <h5 className="card-title">{c.name}</h5>
+                  <h5 className="card-title text-center">{c.name}</h5>
                   <p className="card-text">{c.description}</p>
                 </div>
                 <div className="card-footer">

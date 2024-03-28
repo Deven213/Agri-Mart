@@ -45,17 +45,26 @@ const Contact = () => {
           <div className="col-md-6">
             <div className="contact-details">
               <p>
-                <strong>Address:</strong> 123, AgroMate Office Center,Farm Road,
-                AgriTown, AgriCountry
+                <strong>Address :</strong> 123, AgroMate Office Center,Farm
+                Road, JamTown, India
               </p>
               <p>
-                <strong>Email:</strong> info@agromate.com
+                <strong>Email :</strong> info@agromate.com
               </p>
               <p>
-                <strong>Phone:</strong> +1 (123) 456-7890
+                <strong>Phone :</strong> 1800-180-1551
+              </p>
+              <p>
+                <strong>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                </strong>{" "}
+                0422-6611383
+              </p>
+              <p>
+                <strong>Fax:</strong> 0422-6611521
               </p>
             </div>
-            <form>
+            {/* <form>
               <div className="form-group">
                 <input
                   type="text"
@@ -80,7 +89,7 @@ const Contact = () => {
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>
