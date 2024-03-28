@@ -6,7 +6,6 @@ import { Checkbox, Radio } from "antd";
 import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
-import styles from "./style.module.css";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -116,7 +115,7 @@ const HomePage = () => {
         <div className="row">
           <div className="col-md-3">
             <div
-              className={` shadow p-3 mb-5  rounded`}
+              className="shadow p-3 mb-5 rounded"
               style={{ backgroundColor: "#BFCCBC" }}
             >
               <h4 className="text-center">Filter By Category</h4>
@@ -163,13 +162,24 @@ const HomePage = () => {
                   <div className="card shadow p-3 mb-5 bg-body rounded">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
-                      className={`${styles.image} card-img-top`}
                       alt={p.name}
+                      className="card-img-top"
                       style={{ height: "390px", objectFit: "cover" }}
                     />
                     <div className="card-body">
-                      <h5 className="card-title">{p.name}</h5>
-                      <p className="card-text">
+                      <div
+                        style={{
+                          maxHeight: "40px", // Set max height for product name
+                          overflowY: "auto", // Enable scrolling for overflow
+                        }}
+                      >
+                        <h5 className="card-title">{p.name}</h5>
+                      </div>
+
+                      <p
+                        className="card-text"
+                        style={{ maxHeight: "100px", overflowY: "auto" }}
+                      >
                         {p.description.substring(0, 30)}...
                       </p>
                       <p className="card-text"> ₹ {p.price}</p>

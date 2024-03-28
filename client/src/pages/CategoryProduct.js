@@ -46,11 +46,20 @@ const CategoryProduct = () => {
                     style={{ height: "350px", objectFit: "cover" }} // Smaller image size
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{p.name}</h5>
+                    <div
+                      style={{
+                        maxHeight: "50px", // Set max height for product name
+                        overflowY: "auto", // Enable scrolling for overflow
+                        lineHeight: "20px", // Set fixed line height
+                      }}
+                    >
+                      <h5 className="card-title">{p.name}</h5>
+                    </div>
+
                     <p className="card-text">
                       {p.description.substring(0, 30)}...
                     </p>
-                    <p className="card-text"> $ {p.price}</p>
+                    <p className="card-text"> ₹ {p.price}</p>
                     <div className="d-flex justify-content-between">
                       <button
                         className="btn btn-primary"
