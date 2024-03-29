@@ -11,13 +11,13 @@ const SearchInput = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(auth);
+      // console.log(auth);
       const data = await axios.get(`/api/v1/product/search/${auth?.keyword}`);
-      console.log(data);
+      // console.log(data);
       setAuth({ ...auth, results: data.data });
       navigate("/search");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   return (

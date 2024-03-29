@@ -37,7 +37,7 @@ const UpdateProduct = () => {
       setShipping(data.product.shipping);
       setCategory(data.product.category._id);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   useEffect(() => {
@@ -52,7 +52,7 @@ const UpdateProduct = () => {
         setCategories(data?.category);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Something wwent wrong in getting catgeory");
     }
   };
@@ -83,7 +83,7 @@ const UpdateProduct = () => {
         navigate("/dashboard/admin/products");
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("something went wrong");
     }
   };

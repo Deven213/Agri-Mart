@@ -4,8 +4,8 @@ import { useSearch } from "../context/search";
 
 const Search = () => {
   const [auth, setAuth] = useSearch();
-  console.log(auth);
-  console.log("inside search page");
+  // console.log(auth);
+  // console.log("inside search page");
 
   return (
     <Layout title={"Search results"}>

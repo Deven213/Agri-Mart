@@ -24,7 +24,7 @@ const ProductDetails = () => {
       setProduct(data?.product);
       getSimilarProduct(data?.product._id, data?.product.category._id);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -35,7 +35,7 @@ const ProductDetails = () => {
       );
       setRelatedProducts(data?.products);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

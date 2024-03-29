@@ -26,7 +26,7 @@ const HomePage = () => {
         setCategories(data?.category);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -41,7 +41,7 @@ const HomePage = () => {
       const { data } = await axios.get("/api/v1/product/product-count");
       setTotal(data?.total);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -54,7 +54,7 @@ const HomePage = () => {
       setProducts(data.products);
     } catch (error) {
       setLoading(false);
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -69,10 +69,10 @@ const HomePage = () => {
       setLoading(true);
       const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
       setLoading(false);
-      console.log("Loaded more products:", data.products);
+      // console.log("Loaded more products:", data.products);
       setProducts([...products, ...data?.products]);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setLoading(false);
     }
   };
@@ -105,7 +105,7 @@ const HomePage = () => {
       });
       setProducts(data?.products);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
